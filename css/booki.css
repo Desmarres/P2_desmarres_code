@@ -16,40 +16,40 @@ a {
     color: black;
 }
 
-#pageConteneur {
+#page {
     max-width: 1350px;
     margin: auto;
 }
 
-/* header */
+/* enTete */
 
-nav {
+#enTete {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#header__logo img{
+#enTete__logo img{
     width: 100px;
     margin-left: 20px;
 }
 
-#header__menu {
+#enTete__menu {
     display: flex;
     margin: 0;
 }
 
-#header__menu li {
+#enTete__menu li {
     list-style: none;
     text-align: center;
     padding: 50px 35px;
 }
 
-#header__menu li:hover {
+#enTete__menu li:hover {
     border-top: 2px solid #0065FC;
     font-weight: 600;
 }
 
-#header__menu li:hover a{
+#enTete__menu li:hover a{
     color: #0065FC;
 }
