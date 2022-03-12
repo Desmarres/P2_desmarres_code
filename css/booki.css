@@ -16,12 +16,19 @@ a{
     color: black;
 }
 
+h1{
+    font-size: 22px;
+    font-weight: 800;
+}
+
+/* ---------- page ---------- */
+
 #page{
     max-width: 1350px;
     margin: auto;
 }
 
-/* enTete */
+/* ---------- enTete ---------- */
 
 #enTete{
     display: flex;
@@ -40,28 +47,70 @@ a{
     padding: 0;
 }
 
-#enTete__menu li{
+#enTete__menu a{
     list-style: none;
     text-align: center;
     padding: 50px 35px;
 }
 
-#enTete__menu li:hover{
+#enTete__menu a:hover{
     border-top: 2px solid #0065FC;
+    color: #0065FC;
     font-weight: 600;
 }
 
-#enTete__menu li:hover a{
-    color: #0065FC;
+
+/* ---------- corps  ---------- */
+
+#corps{
+    display: flex;
+    flex-direction: column;
 }
 
-/* design tablette */
+/* rechercher un Hébergement*/
+
+#corps__recherche{
+    display: flex;
+    flex-direction: column;
+}
+
+#corps__recherche form{
+    display: flex;
+    font-size: 18px;
+}
+
+#corps__recherche__icone{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-radius: 15px 0 0 15px;
+}
+
+#corps__recherche__saisie{
+    width: 235px;
+    font-weight: 700;
+    text-indent: 15px;
+}
+
+#corps__recherche__bouton{
+    width: 134px;
+    background-color: #0065FC;
+    border-radius: 0 15px 15px 0;
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+
+/* ---------- design tablette ---------- */
 
 @media screen and (max-width: 992px){
 
 }
 
-/* design portable */
+/* ---------- design portable ---------- */
 
 @media screen and (max-width: 768px){
 
@@ -74,17 +123,22 @@ a{
     #enTete__logo{
         margin: 10px 0;
     }
+    
+    #enTete__logo img{
+        margin: 0px;
+    }
+
     #enTete__menu{
         width: 100%;
     }
 
-    #enTete__menu li{
+    #enTete__menu a{
         width: 50%;
         padding: 10px 0;
         border-bottom: 3px solid #F2F2F2;
     }
 
-    #enTete__menu li:hover{
+    #enTete__menu a:hover{
         border-top: none;
         border-bottom: 3px solid #0065FC;
     }

@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/normalize.css">
         <link rel="stylesheet" href="./css/booki.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/b9f31f4e1e.js" crossorigin="anonymous"></script>
     </head>
 
@@ -18,8 +19,8 @@
                         <img src="./images/Booki.png" alt="Logo Booki">
                     </div>
                     <ul id="enTete__menu">
-                        <li><a href="#corps__hebergements"> Hébergements </a></li>
-                        <li><a href="#corps__activités"> Activités </a></li>
+                        <a href="#corps__hebergements"><li> Hébergements </li></a>
+                        <a href="#corps__activités"><li> Activités </li></a>
                     </ul>
                 </nav>
             </header>
@@ -27,6 +28,27 @@
             <main id="corps">
                 <section id="corps__recherche">
                     <!-- rechercher un Hébergement-->
+                    <div>
+                        <!-- texte introduction -->
+                        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                        <p>En plein centre ville ou en pleine nature</p>
+                    </div>
+                    <div>
+                        <!-- formulaire -->
+                        <form method="post" action="">
+                            <div id="corps__recherche__icone">
+                                <i class='fas fa-map-marker-alt'></i>
+                            </div>
+                            <input type="text" name="ville" id="corps__recherche__saisie" value="Marseille,France" />
+                            <input type="submit" id="corps__recherche__bouton" value="Rechercher" />
+                        </form>
+                    </div>
+                    <div>
+                        <!-- filtres -->
+                    </div>
+                    <div>
+                        <!-- indication -->
+                    </div>
                 </section>
                 <section id="corps__hebergements">
                     <!-- hebergements -->
