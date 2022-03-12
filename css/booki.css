@@ -73,6 +73,10 @@ h1{
     flex-direction: column;
 }
 
+#corps__recherche p{
+    padding: 0 20px 0 10px;
+}
+
 /* formulaire */
 
 #corps__recherche__formulaire{
@@ -142,6 +146,7 @@ h1{
 .boutons{
     display: flex;
     align-items: center;
+    height: 50px;
     margin-right: 20px;
     font-size: 18px;
     font-weight: 800;
@@ -161,8 +166,28 @@ h1{
     border-radius: 25px;
 }
 
-.boutons p{
-    padding: 0 20px 0 10px;
+/* Informations */
+
+#corps__recherche__information{
+    display: flex;
+    align-items: flex-start;
+}
+
+#corps__recherche__information i{
+    width: 25px;
+    height: 25px;
+    font-size: 13px;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F2F2F2;
+    color: #0065FC;
+    border-radius: 15px;
+}
+
+#corps__recherche__information p{
+    padding-top: 5px;
 }
 
 /* ---------- design tablette ---------- */
