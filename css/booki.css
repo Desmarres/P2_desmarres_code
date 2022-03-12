@@ -25,7 +25,7 @@ h1{
 
 #page{
     max-width: 1350px;
-    margin: auto;
+    margin: 0 50px;
 }
 
 /* ---------- enTete ---------- */
@@ -59,7 +59,6 @@ h1{
     font-weight: 600;
 }
 
-
 /* ---------- corps  ---------- */
 
 #corps{
@@ -77,6 +76,10 @@ h1{
 #corps__recherche form{
     display: flex;
     font-size: 18px;
+    max-width: 420px;
+    border-radius: 15px;
+    border: 1px solid #F2F2F2;
+
 }
 
 #corps__recherche__icone{
@@ -90,9 +93,10 @@ h1{
 }
 
 #corps__recherche__saisie{
-    width: 235px;
+    flex: 1;
     font-weight: 700;
     text-indent: 15px;
+    border: none;
 }
 
 #corps__recherche__bouton{
@@ -104,6 +108,10 @@ h1{
     font-weight: 600;
 }
 
+#corps__recherche__loupe{
+    display: none;
+}
+
 /* ---------- design tablette ---------- */
 
 @media screen and (max-width: 992px){
@@ -113,6 +121,12 @@ h1{
 /* ---------- design portable ---------- */
 
 @media screen and (max-width: 768px){
+
+    /* ---------- page ---------- */
+
+    #page{
+        margin: 0;
+    }
 
     /* enTete */
 
@@ -141,6 +155,38 @@ h1{
     #enTete__menu a:hover{
         border-top: none;
         border-bottom: 3px solid #0065FC;
+    }
+    
+/* ---------- corps  ---------- */
+
+    #corps__recherche{
+        margin: 20px 30px;
+    }
+    
+    /* rechercher un Hébergement*/
+
+    #corps__recherche form{
+        max-width: 320px;
+        border-radius: 15px;
+        border: 1px solid #F2F2F2;
+    }
+
+    #corps__recherche__saisie{
+        border: none;
+    }
+
+    #corps__recherche__bouton{
+        display: none;
+    }
+
+    #corps__recherche__loupe{
+        width: 50px;
+        height: 50px;
+        display: inline;
+        background-color: #0065FC;
+        border-radius: 15px;
+        border: none;
+        color: white;
     }
 
 }
