@@ -1,29 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *{
-    box-sizing: border-box;/* 
-    border: 1px solid black; */
+    box-sizing: border-box;
+    /* border: 1px solid black; */
 }
 
-body {
+body{
     margin: auto;
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
 }
 
-a {
+a{
     text-decoration: none;
     color: black;
 }
 
-#page {
+#page{
     max-width: 1350px;
     margin: auto;
 }
 
 /* enTete */
 
-#enTete {
+#enTete{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,22 +34,59 @@ a {
     margin-left: 20px;
 }
 
-#enTete__menu {
+#enTete__menu{
     display: flex;
     margin: 0;
+    padding: 0;
 }
 
-#enTete__menu li {
+#enTete__menu li{
     list-style: none;
     text-align: center;
     padding: 50px 35px;
 }
 
-#enTete__menu li:hover {
+#enTete__menu li:hover{
     border-top: 2px solid #0065FC;
     font-weight: 600;
 }
 
 #enTete__menu li:hover a{
     color: #0065FC;
+}
+
+/* design tablette */
+
+@media screen and (max-width: 992px){
+
+}
+
+/* design portable */
+
+@media screen and (max-width: 768px){
+
+    /* enTete */
+
+    #enTete{
+        flex-direction: column;
+    }
+
+    #enTete__logo{
+        margin: 10px 0;
+    }
+    #enTete__menu{
+        width: 100%;
+    }
+
+    #enTete__menu li{
+        width: 50%;
+        padding: 10px 0;
+        border-bottom: 3px solid #F2F2F2;
+    }
+
+    #enTete__menu li:hover{
+        border-top: none;
+        border-bottom: 3px solid #0065FC;
+    }
+
 }
