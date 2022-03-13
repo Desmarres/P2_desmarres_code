@@ -80,15 +80,12 @@ h1{
 /* formulaire */
 
 #corps__recherche__formulaire{
+    display: flex;
     font-size: 18px;
     max-width: 420px;
     border-radius: 15px;
     border: 1px solid #F2F2F2;
     margin: 15px 0px;
-}
-
-#corps__recherche__formulaire form{
-    display: flex;
 }
 
 #corps__recherche__formulaire__icone{
@@ -164,6 +161,11 @@ h1{
     background-color: #DEEBFF;
     color: #0065FC;
     border-radius: 25px;
+}
+
+.boutons:hover{
+    background-color: #0065FC;
+    color: white;
 }
 
 /* Informations */
@@ -273,4 +275,5 @@ h1{
         font-size: 15px;
         margin: 5px;
     }
+
 }
