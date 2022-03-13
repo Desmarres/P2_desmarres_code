@@ -220,6 +220,87 @@ h1{
     padding-top: 5px;
 }
 
+/* hebergement */
+
+#corps__hebergements{
+    display: flex;
+    margin: 40px 0;
+}
+
+/* hebergement dans la ville */
+
+#corps__hebergements__ville{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #F2F2F2;
+    border-radius: 25px;
+    padding: 40px;
+}
+
+#corps__hebergements__ville__liste{
+    margin-top: 20px;
+}
+
+/* annonces */
+
+.corps__hebergements__ville__liste__annonces{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 5px;
+}
+
+.corps__hebergements__ville__liste__annonces__images{
+    display: flex;
+    width: 240px;
+    max-height: 120px;
+}
+
+.objectFitContain{
+    object-fit: cover;
+    max-width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.corps__hebergements__ville__liste__annonces__description{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.corps__hebergements__ville__liste__annonces__description h3{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.corps__hebergements__ville__liste__annonces__description p{
+    padding: 5px 0;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.corps__hebergements__ville__liste__annonces__description div{
+    color: #0065FC;
+    font-size: 12px;
+}
+
+#corps__hebergements__ville__liste__annonces__noteAubergeLaCannebière .fa:nth-child(5){
+    color: #F2F2F2;
+}
+
+
+/* hebergement populaire */
+
+#corps__hebergements__populaires{
+    display: flex;
+    flex-direction: column;
+    max-width: 250 px;
+}
+
 /* ---------- design tablette ---------- */
 
 @media screen and (max-width: 992px){
