@@ -227,80 +227,154 @@ h1{
     margin: 40px 0;
 }
 
+.backgroundHebergement{
+    background-color: #F2F2F2;
+    border-radius: 25px;
+    padding: 40px;
+}
+
+/* annonces */
+
+.annonces{
+    display: flex;
+    border-radius: 20px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0px 4px 8px #D9D9D9;
+}
+
+.objectFitContain{
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.description h3{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.description p{
+    font-weight: 400;
+    font-size: 14px;
+    flex: 1;
+    padding: 5px 0;
+}
+
+.description div{
+    padding: 5px 0;    
+    display: flex;
+    color: #0065FC;
+    font-size: 12px;
+}
+
 /* hebergement dans la ville */
 
 #corps__hebergements__ville{
     display: flex;
     flex-direction: column;
     flex: 1;
-    background-color: #F2F2F2;
-    border-radius: 25px;
-    padding: 40px;
+    margin-right: 40px;
 }
 
 #corps__hebergements__ville__liste{
-    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-/* annonces */
-
-.corps__hebergements__ville__liste__annonces{
-    display: flex;
+#corps__hebergements__ville__liste .annonces{
     flex-direction: column;
     width: 250px;
     height: 200px;
-    border-radius: 20px;
-    background-color: white;
-    padding: 5px;
 }
 
-.corps__hebergements__ville__liste__annonces__images{
+#corps__hebergements__ville__liste__images{
     display: flex;
-    width: 240px;
-    max-height: 120px;
+    max-height: 115px;
 }
 
-.objectFitContain{
-    object-fit: cover;
-    max-width: 100%;
+#corps__hebergements__ville__liste .objectFitContain{
     border-radius: 15px 15px 0 0;
 }
 
-.corps__hebergements__ville__liste__annonces__description{
-    display: flex;
-    flex-direction: column;
+#corps__hebergements__ville__liste .description{
     padding: 10px;
 }
 
-.corps__hebergements__ville__liste__annonces__description h3{
+/* notation Hébergement */
+
+#corps__hebergements__ville__liste__noteAubergeLaCannebiere .fa:nth-child(5){
+    color: #D9D9D9;
+}
+
+/* afficher plus */
+
+#corps__hebergements__ville__afficherPlus{
+    font-size: 17px;
     font-weight: 700;
-    font-size: 16px;
 }
-
-.corps__hebergements__ville__liste__annonces__description p{
-    padding: 5px 0;
-    font-weight: 400;
-    font-size: 14px;
-}
-
-.corps__hebergements__ville__liste__annonces__description div{
-    color: #0065FC;
-    font-size: 12px;
-}
-
-#corps__hebergements__ville__liste__annonces__noteAubergeLaCannebière .fa:nth-child(5){
-    color: #F2F2F2;
-}
-
 
 /* hebergement populaire */
 
 #corps__hebergements__populaires{
     display: flex;
-    flex-direction: column;
-    max-width: 250 px;
+    flex-direction: column;    
+    margin-right: 10px;
 }
 
+#corps__hebergements__populaires__liste{
+    display: flex;
+    flex-direction: column;
+}
+
+#corps__hebergements__populaires__liste .annonces{
+    width: 340px;
+    height: 150px;
+}
+
+#corps__hebergements__populaires__liste__images{
+    display: flex;
+    max-width: 125px;
+    max-height: 150px;
+}
+
+#corps__hebergements__populaires__liste .objectFitContain{
+    border-radius: 15px 0 0 15px;
+}
+
+#corps__hebergements__populaires__liste .description{
+    padding: 10px 10px 5px 20px;
+}
+
+/* 
+.annonces:hover .images{
+    transition: 0.5s;
+    max-height: 126px;
+}
+
+.annonces:hover {
+    transition: 0.5s;
+    width: 275px;
+    height: 220px;
+}
+
+#corps__hebergements__populaires__liste .annonces:hover {
+    transition: 0.5s;
+    width: 275px;
+    height: 126px;
+}
+
+#corps__hebergements__populaires__liste .annonces:hover .images{
+    transition: 0.5s;
+    max-height: 126px;
+}
+ */
 /* ---------- design tablette ---------- */
 
 @media screen and (max-width: 992px){
