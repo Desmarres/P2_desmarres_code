@@ -230,7 +230,7 @@ h1{
 .backgroundHebergement{
     background-color: #F2F2F2;
     border-radius: 25px;
-    padding: 40px;
+    padding: 20px;
 }
 
 /* annonces */
@@ -240,6 +240,7 @@ h1{
     border-radius: 20px;
     background-color: white;
     padding: 5px;
+    margin: 15px;
     box-shadow: 0px 4px 8px #D9D9D9;
 }
 
@@ -258,13 +259,14 @@ h1{
 .description h3{
     font-weight: 700;
     font-size: 16px;
+    padding: 1px;
 }
 
 .description p{
     font-weight: 400;
     font-size: 14px;
     flex: 1;
-    padding: 5px 0;
+    padding: 3px 0;
 }
 
 .description div{
@@ -273,6 +275,17 @@ h1{
     color: #0065FC;
     font-size: 12px;
 }
+
+/* notationS Hébergement */
+
+.quatreEtoiles .fa:nth-child(5){
+    color: #D9D9D9;
+}
+
+.troisEtoiles .fa:nth-child(4), .troisEtoiles .fa:nth-child(5){
+    color: #D9D9D9;
+}
+
 
 /* hebergement dans la ville */
 
@@ -297,6 +310,7 @@ h1{
 #corps__hebergements__ville__liste__images{
     display: flex;
     max-height: 115px;
+    min-width: 240px;
 }
 
 #corps__hebergements__ville__liste .objectFitContain{
@@ -305,12 +319,6 @@ h1{
 
 #corps__hebergements__ville__liste .description{
     padding: 10px;
-}
-
-/* notation Hébergement */
-
-#corps__hebergements__ville__liste__noteAubergeLaCannebiere .fa:nth-child(5){
-    color: #D9D9D9;
 }
 
 /* afficher plus */
@@ -340,8 +348,12 @@ h1{
 
 #corps__hebergements__populaires__liste__images{
     display: flex;
-    max-width: 125px;
-    max-height: 150px;
+    width: 38%;
+    height: 140px;
+}
+
+#corps__hebergements__populaires__liste__images img{
+    width: 100%;
 }
 
 #corps__hebergements__populaires__liste .objectFitContain{
@@ -349,6 +361,7 @@ h1{
 }
 
 #corps__hebergements__populaires__liste .description{
+    width: 62%;
     padding: 10px 10px 5px 20px;
 }
 
