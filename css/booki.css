@@ -142,6 +142,10 @@ h1{
     align-items: center;
 }
 
+#corps__recherche__filtres__boutons input[type=checkbox]{
+    visibility: hidden;
+}
+
 .boutons{
     display: flex;
     align-items: center;
@@ -165,35 +169,11 @@ h1{
     border-radius: 25px;
 }
 
-/* survol des filtres et changement label checked */
-
-.boutons:hover{
-    height: 55px;
-    font-size: 20px;
-    border-radius: 55px;
-    box-shadow: -6px 6px 6px #D9D9D9;
-}
-
-.boutons:hover i{
-    width: 55px;
-    height: 55px;
-    border-radius: 55px;
-}
-
-#corps__recherche__filtres__boutons input[type=checkbox]{
-    visibility: hidden;
-}
+/*changement filtres checked */
 
 #corps__recherche__filtres__boutons input[type=checkbox]:checked + label{
     background-color: #0065FC;
     color: white;    
-}
-
-#corps__recherche__filtres__boutons input[type=checkbox]:checked + label:hover{
-    height: 55px;
-    font-size: 20px;
-    border-radius: 55px;
-    box-shadow: -6px 6px 6px #D9D9D9;
 }
 
 /* Informations */
@@ -230,7 +210,7 @@ h1{
 .backgroundHebergement{
     background-color: #F2F2F2;
     border-radius: 25px;
-    padding: 20px;
+    padding: 3%;
 }
 
 /* annonces */
@@ -240,7 +220,7 @@ h1{
     border-radius: 20px;
     background-color: white;
     padding: 5px;
-    margin: 15px;
+    margin: 30px 0 0 0;
     box-shadow: 0px 4px 8px #D9D9D9;
 }
 
@@ -276,7 +256,7 @@ h1{
     font-size: 12px;
 }
 
-/* notationS Hébergement */
+/* notation Hébergement */
 
 .quatreEtoiles .fa:nth-child(5){
     color: #D9D9D9;
@@ -299,6 +279,7 @@ h1{
 #corps__hebergements__ville__liste{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #corps__hebergements__ville__liste .annonces{
@@ -324,17 +305,36 @@ h1{
 /* afficher plus */
 
 #corps__hebergements__ville__afficherPlus{
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    flex: 1;
 }
 
 /* hebergement populaire */
 
 #corps__hebergements__populaires{
     display: flex;
-    flex-direction: column;    
-    margin-right: 10px;
+    flex-direction: column;
+    align-items: center; 
+
 }
+
+
+/* titre */
+
+#corps__hebergements__populaires__titre{
+    display: flex;
+    justify-content: space-between;
+    width: 340px;
+}
+
+#corps__hebergements__populaires__titre i{
+    font-size: 25px;
+}
+
+/* liste */
 
 #corps__hebergements__populaires__liste{
     display: flex;
@@ -388,10 +388,41 @@ h1{
     max-height: 126px;
 }
  */
+
+/* ---------- design desktop ---------- */
+
+@media screen and (min-width: 992px){
+
+    /* survol des filtres */
+
+    .boutons:hover{
+        height: 55px;
+        font-size: 20px;
+        border-radius: 55px;
+        box-shadow: -6px 6px 6px #D9D9D9;
+    }
+
+    .boutons:hover i{
+        width: 55px;
+        height: 55px;
+        border-radius: 55px;
+    }
+
+    #corps__recherche__filtres__boutons input[type=checkbox]:checked + label:hover{
+        height: 55px;
+        font-size: 20px;
+        border-radius: 55px;
+        box-shadow: -6px 6px 6px #D9D9D9;
+    }
+
+}
+
 /* ---------- design tablette ---------- */
 
 @media screen and (max-width: 992px){
-
+    .boutons:hover{
+        box-shadow: -12px 12px 12px #D9D9D9;
+    }
 }
 
 /* ---------- design portable ---------- */
