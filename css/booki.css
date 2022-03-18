@@ -226,7 +226,7 @@ h1{
 
 .objectFitContain{
     object-fit: cover;
-    max-width: 100%;
+    width: 100%;
 }
 
 .description{
