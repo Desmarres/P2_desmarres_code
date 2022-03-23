@@ -401,6 +401,7 @@ main{
     display: flex;
     flex-direction: column;
     margin: 25px 0;
+    border-radius: 25px;
 }
 
 #corps__activites__liste{
@@ -419,6 +420,7 @@ main{
 }
 
 .activites{
+    position: relative;
     width: 305px;
     display: flex;
     flex-direction: column;
@@ -428,14 +430,19 @@ main{
 }
 
 .activites img{
-    border-radius: 25px 25px 0 0;
+    border-radius: 25px;
 }
 
 .activites figcaption{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: #FFFFFF;
     height: 55px;
     display: flex;
     align-items: center;
     padding-left: 20px;
+    border-radius: 0 0 25px 25px;
 }
 
 .activites:nth-child(1){
@@ -444,19 +451,19 @@ main{
 }
 
 .liste:nth-child(1) .activites:nth-child(2) img{
-    height: 180px;
+    height: 240px;
 }
 
 .liste:nth-child(1) .activites:nth-child(3) img{
-    height: 110px;
+    height: 165px;
 }
 
 .liste:nth-child(2) .activites:nth-child(2) img{
-    height: 140px;
+    height: 200px;
 }
 
 .liste:nth-child(2) .activites:nth-child(3) img{
-    height: 155px;
+    height: 210px;
 }
 
 /* ---------- piedDePage ---------- */
