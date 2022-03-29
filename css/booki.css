@@ -16,12 +16,12 @@ body{
 a{
     text-decoration: none;
     color: black;
-    list-style: none;
 }
 
 h1{
-    font-weight: 800;
+    font-weight: 700;
     font-size: 22px;
+    margin: 12px 0;
 }
 
 h2{
@@ -34,27 +34,34 @@ h3{
     font-size: 16px;
 }
 
+li{
+    list-style: none;
+}
+
 /* ---------- enTete ---------- */
 
 header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 107px;
     padding: 0 50px;
 }
 
 #enTete__logo img{
-    width: 100px;
-    margin-left: 20px;
+    width: 95px;
+    margin-left: 15px;
 }
 
-#enTete__menu{
+#enTete__menu, #enTete__menu li, #enTete__menu a{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 #enTete__menu a{
-    text-align: center;
-    padding: 50px 35px;
+    padding: 0 35px;
     border-top: 2px solid transparent;
 }
 
@@ -69,7 +76,11 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+main section{
     padding: 0 50px;
+
 }
 
 /* rechercher un Hébergement*/
@@ -86,15 +97,15 @@ main{
 #corps__recherche__formulaire{
     display: flex;
     font-size: 18px;
-    width: 430px;
+    width: 422px;
     border-radius: 15px;
     border: 1px solid #F2F2F2;
     margin: 20px 0px;
 }
 
-#corps__recherche__formulaire__icone{
-    width: 50px;
-    height: 50px;
+.fa-map-marker-alt{
+    width: 52px;
+    height: 52px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,7 +121,7 @@ main{
 }
 
 #corps__recherche__formulaire__bouton{
-    width: 138px;
+    width: 135px;
     background-color: #0065FC;
     border-radius: 0 15px 15px 0;
     border: none;
@@ -119,6 +130,12 @@ main{
 }
 
 #corps__recherche__formulaire__loupe{
+    width: 52px;
+    height: 52px;
+    background-color: #0065FC;
+    border-radius: 15px;
+    border: none;
+    color: white;
     display: none;
 }
 
@@ -128,39 +145,36 @@ main{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin: 23px 0px;
+    min-height: 72px;
 }
 
 #corps__recherche__filtres h2{
     font-weight: 800;
     font-size: 18px;
-    margin: 22px 0;
-    padding-right: 30px;
+    margin: 12px;
+    margin-right: 33px;
 }
 
-#corps__recherche__filtres__boutons{
+#corps__recherche__filtres div{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
-#corps__recherche__filtres__boutons input[type=checkbox]{
-    visibility: hidden;
-}
-
-.boutons{
+#corps__recherche__filtres button{
     display: flex;
     align-items: center;
     height: 50px;
-    margin-right: 10px;
+    margin: 6px 25px 6px 0;
     font-size: 18px;
     font-weight: 700;
     border-radius: 50px;
+    background-color: #FFFFFF;
     border: 2px solid #D9D9D9;
     border-left: none;
 }
 
-.boutons i{
+#corps__recherche__filtres i{
     width: 50px;
     height: 50px;
     display: flex;
@@ -171,48 +185,37 @@ main{
     border-radius: 25px;
 }
 
-.boutons p{
-    margin-right: 20px;
-    margin-left: 10px;
-}
-
-/*changement filtres checked */
-
-#corps__recherche__filtres__boutons input[type=checkbox]:checked + label{
-    background-color: #0065FC;
-    color: white;    
+#corps__recherche__filtres p{
+    margin: 0 20px 0 11px;
 }
 
 /* Informations */
 
 #corps__recherche__information{
     display: flex;
-    align-items: flex-start;
-    margin-top: 20px;
+    align-items: center;
+    margin-top: 11px;
 }
 
 #corps__recherche__information i{
     width: 25px;
     height: 25px;
-    font-size: 13px;
-    padding: 2px;
+    font-size: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #F2F2F2;
+    border: 1px solid #D9D9D9;
     color: #0065FC;
     border-radius: 15px;
+    margin: 12px
 }
 
-#corps__recherche__information p{
-    padding-top: 5px;
-}
 
 /* hebergement */
 
 #corps__hebergements{
     display: flex;
-    margin: 37px 0 12px 0;
+    margin: 25px 0 12px 0;
 }
 
 #corps__hebergements h2{
@@ -499,7 +502,7 @@ footer nav{
 
     /* survol des filtres */
 
-    .boutons:hover{
+    #corps__recherche__filtres button:hover{
         transition: 0.2s;
         height: 55px;
         font-size: 20px;
@@ -507,19 +510,11 @@ footer nav{
         box-shadow: -6px 6px 6px #D9D9D9;
     }
 
-    .boutons:hover i{
+    #corps__recherche__filtres button:hover i{
         transition: 0.2s;
         width: 55px;
         height: 55px;
         border-radius: 55px;
-    }
-
-    #corps__recherche__filtres__boutons input[type=checkbox]:checked + label:hover{
-        transition: 0.2s;
-        height: 55px;
-        font-size: 20px;
-        border-radius: 55px;
-        box-shadow: -6px 6px 6px #D9D9D9;
     }
 
 }
@@ -538,7 +533,7 @@ footer nav{
 
     /* ---------- page ---------- */
 
-    main{
+    main section{
         padding: 0;
     }
 
@@ -549,21 +544,21 @@ footer nav{
         padding: 0;
     }
 
-    #enTete__logo{
-        margin: 10px 0;
-    }
-    
     #enTete__logo img{
-        margin: 0px;
+        margin: 20px 0 0 35px;
     }
 
     #enTete__menu{
         width: 100%;
     }
 
-    #enTete__menu a{
+    #enTete__menu li {
         width: 50%;
-        padding: 10px 0;
+        display: flex;
+    }
+    #enTete__menu a{
+        padding: 15px;
+        width: 100%;
         border-bottom: 3px solid #F2F2F2;
     }
 
@@ -595,20 +590,14 @@ footer nav{
     }
 
     #corps__recherche__formulaire__loupe{
-        width: 50px;
-        height: 50px;
         display: inline;
-        background-color: #0065FC;
-        border-radius: 15px;
-        border: none;
-        color: white;
     }
         
     /* Filtres */
 
-    .boutons{
+    #corps__recherche__filtres button{
         font-size: 15px;
-        margin: 5px;
+        margin-right: 10px;
     }
 
     /* hebergement */
@@ -654,7 +643,7 @@ footer nav{
         display: flex;
         align-items: center;
     }
-    
+
     /* activités */
 
     #corps__activites{
