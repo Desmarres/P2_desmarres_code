@@ -103,7 +103,7 @@ main section{
     margin: 20px 0px;
 }
 
-.fa-map-marker-alt{
+#corps__recherche__formulaire .fa-map-marker-alt{
     width: 52px;
     height: 52px;
     display: flex;
@@ -115,9 +115,13 @@ main section{
 
 #corps__recherche__formulaire__saisie{
     flex: 1;
+    border: none;
+}
+
+#corps__recherche__formulaire__saisie::placeholder{
+    color: black;
     font-weight: 700;
     text-indent: 15px;
-    border: none;
 }
 
 #corps__recherche__formulaire__bouton{
