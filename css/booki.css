@@ -289,7 +289,7 @@ main section{
 #corps__hebergements__ville__liste{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #corps__hebergements__ville__liste .annonces{
@@ -343,6 +343,7 @@ main section{
 /* liste */
 
 #corps__hebergements__populaires__liste{
+    display: flex;
     flex-direction: column;
 }
 
@@ -357,7 +358,7 @@ main section{
 #corps__hebergements__populaires__liste .annonces img{
     display: flex;
     width: 37%;
-    height: 140px;
+    height: auto;
     border-radius: 15px 0 0 15px;
 }
 
@@ -372,7 +373,6 @@ main section{
     display: flex;
     flex-direction: column;
     margin: 25px 0;
-    border-radius: 25px;
 }
 
 #corps__activites__liste{
@@ -404,6 +404,10 @@ main section{
     box-shadow: 0px 4px 8px #D9D9D9;
 }
 
+.activites figure{
+    height: 100%;
+}
+
 .activites img{
     border-radius: 25px;
 }
@@ -420,7 +424,7 @@ main section{
     border-radius: 0 0 25px 25px;
 }
 
-.colonne:nth-child(1) a, .colonne:nth-child(3) a{
+.colonne:nth-child(1) .activites, .colonne:nth-child(3) .activites{
     height: 100%;
 }
 
@@ -489,10 +493,66 @@ footer nav{
 
 /* ---------- design tablette ---------- */
 
-@media screen and (max-width: 992px){
-    .boutons:hover{
+@media screen and (max-width: 992px) and (min-width: 769px){
+
+    /* Filtre */
+
+    button:hover{
         box-shadow: -12px 12px 12px #D9D9D9;
     }
+
+    /* hebergement */
+
+    #corps__hebergements{
+        flex-direction: column;
+    }
+    
+    #corps__hebergements .background__Hebergement{
+        width: 100%;
+    }
+    
+    /* hebergements dans la ville*/
+
+    .background__Hebergement:nth-child(1){
+        order: 2;
+    }
+
+    /* hebergements les plus populaires */
+
+    .background__Hebergement:nth-child(2){
+        order: 1;
+        margin-bottom: 25px;
+    }
+
+    #corps__hebergements__populaires__liste{
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    #corps__hebergements__populaires__liste .annonces{
+        width: 30%;
+        height: 210px;
+        margin: 0;
+    }
+    
+    #corps__hebergements__populaires__liste .annonces a{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #corps__hebergements__populaires__liste .annonces img{
+        display: flex;
+        max-height: 115px;
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+    }
+    
+    #corps__hebergements__populaires__liste .description{
+        height: auto;
+        padding: 10px;
+    }
+    
 }
 
 /* ---------- design portable ---------- */
@@ -568,80 +628,103 @@ footer nav{
         margin-right: 10px;
     }
 
+    button:hover{
+        box-shadow: -12px 12px 12px #D9D9D9;
+    }
+
+
     /* hebergement */
 
     #corps__hebergements{
         flex-direction: column;
     }
 
-    .backgroundHebergement{
+    #corps__hebergements .background__Hebergement{
         padding: 30px 0;
+        width: 100%;
+        margin: 0;
+        border-radius: 0px;
+    }
+    
+    #corps__hebergements h2{
+        width: 90%;
+    }
+
+    #corps__hebergements .annonces{
+        width: 90%;
+    }
+
+    #corps__hebergements__ville__afficherPlus{
+        width: 90%;
     }
 
     /* hebergements dans la ville*/
 
-    #corps__hebergements__ville{
+    .background__Hebergement:nth-child(1){
         order: 2;
         background-color: #FFFFFF;
-        margin: 0;
-    }
-
-    h2, #corps__hebergements__ville__afficherPlus{  /* afficher plus */
-        margin: auto;
-        width: 340px;
+        align-items: center;
     }
 
     #corps__hebergements__ville__liste{
         justify-content: center;
     }
-
-    #corps__hebergements .annonces{
-        width: 340px;
-    }
-
     /* hebergements les plus populaires */
 
-    #corps__hebergements__populaires{
+    .background__Hebergement:nth-child(2){
         order: 1;
-        border-radius: 0px;
-        width: 100%;
+    }
+    #corps__hebergements__populaires__titre
+    {
+        width: 90%;
     }
 
-    #corps__hebergements__populaires i{
+    #corps__hebergements__populaires__liste{
         display: flex;
         align-items: center;
+        width: 100%;
     }
 
     /* activités */
 
     #corps__activites{
         margin: 0 0 25px 0;
+        align-items: center;
+    }
+
+    #corps__activites h2{
+        width: 90%;
+    }
+
+    #corps__activites__liste{
+        justify-content: center;
+    }
+
+    .colonne{
+        flex-wrap: wrap;
+        width: 90%;
+        height: auto;
     }
 
     #corps__activites__liste .activites{
-        margin-right: 0;
-    }
-    
-    .liste{
-        width: 100%;
-        height: 100%;
-        align-content: center;
+        height: auto;
     }
 
-    #corps__activites__liste .activites, #corps__activites__liste img{
-        width: 340px;
-        height: 195px;
+    #corps__activites__liste .activites img{
+        height: auto;
+        max-height: 192px;
     }
 
     /* footer */
 
     footer nav{
-        font-size: 18px;
-        padding: 30px;
         flex-direction: column;
+        align-items: center;
+        padding: 25px 0 0 0;
     }
 
     .piedDePage__liens{
-        margin: 15px 0;
+        margin: 15px 8px;
+        width: 90%;
     }
 }
