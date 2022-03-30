@@ -425,23 +425,23 @@ main section{
 }
 
 .colonne:nth-child(1) .activites, .colonne:nth-child(3) .activites{
-    height: 100%;
+    height: 100%;  /* fixe la hauteur des grands cartes activités colonne 1 et 3 */
 }
 
 .colonne:nth-child(2) .activites:nth-child(1), .colonne:nth-child(2) .activites:nth-child(1) img{
-    height: 240px;
+    height: 240px; /* fixe la hauteur de la première cartes activités colonne 2 */
 }
 
 .colonne:nth-child(2) .activites:nth-child(2), .colonne:nth-child(2) .activites:nth-child(2) img{
-    height: 165px;
+    height: 165px; /* fixe la hauteur de la deuxième cartes activités colonne 2 */
 }
 
 .colonne:nth-child(4) .activites:nth-child(1), .colonne:nth-child(4) .activites:nth-child(1) img{
-    height: 200px;
+    height: 200px; /* fixe la hauteur de la première cartes activités colonne 4 */
 }
 
 .colonne:nth-child(4) .activites:nth-child(2), .colonne:nth-child(4) .activites:nth-child(2) img{
-    height: 210px;
+    height: 210px; /* fixe la hauteur de la deuxième cartes activités colonne 4 */
 }
 
 /* ---------- piedDePage ---------- */
@@ -551,6 +551,32 @@ footer nav{
     #corps__hebergements__populaires__liste .description{
         height: auto;
         padding: 10px;
+    }
+    
+    /* activités */
+
+    #corps__activites__liste{
+        flex-direction: column;
+    }
+
+    .colonne{
+        width: 100%;
+        height: 300px;
+        margin: 10px;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    
+    #corps__activites__liste .activites{
+        height: 100%;
+    }
+
+    #corps__activites__liste .activites img{
+        height: 100%;
+    }
+
+    .colonne:nth-child(2) .activites, .colonne:nth-child(4) .activites{
+        width: 49%;
     }
     
 }
