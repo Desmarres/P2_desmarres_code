@@ -48,7 +48,7 @@ header nav{
     padding: 0 50px;
 }
 
-#enTete__logo img{
+nav img{
     width: 95px;
     margin-left: 15px;
 }
@@ -116,6 +116,7 @@ main section{
 #corps__recherche__formulaire__saisie{
     flex: 1;
     border: none;
+    text-indent: 15px;
 }
 
 #corps__recherche__formulaire__saisie::placeholder{
@@ -602,7 +603,7 @@ footer nav{
         padding: 0;
     }
 
-    #enTete__logo img{
+    nav img{
         margin: 20px 0 0 35px;
     }
 
